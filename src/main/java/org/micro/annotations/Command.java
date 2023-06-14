@@ -9,5 +9,12 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 @Target({METHOD})
 @Retention(RUNTIME)
 public @interface Command {
-    
+    // value
+    String value() default "";
+
+    // description
+    String description() default "";
+
+    // comment
+    String comment() default "";
 }
