@@ -9,6 +9,12 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 @Target({FIELD})
 @Retention(RUNTIME)
 public @interface SearchColumn {
+
+    public static class HighLights {
+        public static final String HIGHLIGHT_NAME_ID = "#[id]";
+        public static final String HIGHLIGHT_NAME_INDEX = "#[index]";
+    }
+
     boolean text() default false;
 
     String highlight() default "";
